@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'cloudinary',
-
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -136,4 +136,8 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'HJca6uTCKCu_0zLVx7lSsXJm1fw',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
