@@ -8,6 +8,6 @@ class Product(models.Model):
     image = models.ImageField(upload_to='images') # image
     description = models.TextField(max_length=240)
 
-    def__str(self):
+    def __str__(self):
         return self.name
 
