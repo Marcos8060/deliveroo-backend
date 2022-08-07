@@ -4,7 +4,7 @@ from .serializers import *
 from .models import *
 
 # Create your views here.
-class Products(generics.ListCreatAPIView):
-    queryset = Product.ojects.all()
+class Products(generics.ListCreateAPIView):
+    queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
