@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'corsheaders',
     'rest_framework_swagger',
+    'rest_framework_simplejwt',
+
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,12 @@ WSGI_APPLICATION = 'deliveroo.wsgi.application'
 
 
 REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
+REST_FRAMEWORK = {
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 
 # Database
