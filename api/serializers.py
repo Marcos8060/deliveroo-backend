@@ -4,12 +4,6 @@ from .models import *
 from django.contrib.auth.models import User
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
-
-
 
 class RegisterUserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(max_length=50,min_length=6,write_only=True)
@@ -25,3 +19,16 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+
+
+class CartSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cart
+        fields = '__all__'

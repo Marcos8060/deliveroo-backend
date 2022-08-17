@@ -68,3 +68,8 @@ class ProductDetail(generics.RetrieveUpdateAPIView):
     queryset  = Product.objects.all()
     serializer_class = ProductSerializer
 
+
+class CartItems (generics.ListCreateAPIView):
+    queryset = Cart.objects.all()
+    serializer_class = CartSerializer
+

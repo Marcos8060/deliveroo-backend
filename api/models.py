@@ -11,3 +11,12 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
+class Cart(models.Model):
+    name = models.CharField(max_length=30)
+    price = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='images') # image
+
+    def __str__(self):
+        return self.name
+

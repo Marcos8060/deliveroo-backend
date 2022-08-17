@@ -9,6 +9,7 @@ urlpatterns = [
     path('register/',UsersList.as_view(),name='create_user'),
     path('products/', Products.as_view()),
     path('products/<int:pk>/', ProductDetail.as_view()),
+    path('cart/', CartItems.as_view()),
 
 
     # TOKEN
